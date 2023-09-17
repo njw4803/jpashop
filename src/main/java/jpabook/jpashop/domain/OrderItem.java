@@ -5,7 +5,7 @@ import javax.xml.namespace.QName;
 import java.time.LocalDateTime;
 
 @Entity
-public class OrderItem {
+public class OrderItem extends BaseEntity {
 
     @Id @GeneratedValue
     @Column(name = "ORDER_ITEM_ID")
@@ -17,7 +17,6 @@ public class OrderItem {
 
     @ManyToOne
     @JoinColumn(name = "ITEM_ID")
-    @Column(name = "ITEM_ID")
     private Item item;
 
     private int orderPrice;
